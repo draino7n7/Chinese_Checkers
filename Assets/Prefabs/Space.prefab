@@ -60,6 +60,9 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -120,3 +123,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   row: 8
   col: 12
+  spaceHighlightMaterial: {fileID: 2100000, guid: 17bfe46f9f599ff418d67e397f798b21, type: 2}
+  playerPieceMaterial: {fileID: 2100000, guid: 47e0b42c24f132d4d91ea8e82bad2374, type: 2}

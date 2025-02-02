@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 544615731891298888}
   - component: {fileID: 6837244099087072060}
   - component: {fileID: 1850756322163719758}
-  - component: {fileID: 8421770951622574132}
   m_Layer: 0
   m_Name: GamePiece
   m_TagString: Untagged
@@ -60,6 +59,9 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
   m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -106,15 +108,3 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &8421770951622574132
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6582581630707390606}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 135bdcd700fb1fd42b09686b2f0f5fcf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

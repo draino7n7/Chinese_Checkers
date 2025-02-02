@@ -3,13 +3,15 @@ using UnityEngine.InputSystem;
 
 namespace Controller
 {
-    public class ClickOnBoardSpace : MonoBehaviour
+    public class ClickOnBoardSpace : Utilities.SingletonMonoBehaviour<ClickOnBoardSpace>
     {
         private Camera mainCamera;
         private PlayerInputActions inputActions;
 
-        private void Awake()
-        {
+        protected override void Awake()
+        { 
+            base.Awake();
+            Debug.Log("ClickOnBoardSpace Singleton Initialized");
             mainCamera = Camera.main;
             inputActions = new PlayerInputActions();
         }
