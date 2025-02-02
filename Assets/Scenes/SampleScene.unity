@@ -6927,15 +6927,15 @@ PrefabInstance:
     - target: {fileID: -3868199374043788478, guid: 67ac70456e2f27b4d8dbc5fb163ee817, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 73d7641857147754ba41d0985fb35f49, type: 2}
+      objectReference: {fileID: 2100000, guid: 12f0e2bcbb4680144b1a8b0c782e931c, type: 2}
     - target: {fileID: -1833537312130112818, guid: 67ac70456e2f27b4d8dbc5fb163ee817, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 19c59838deb2b2440911b4454ac59ab5, type: 2}
+      objectReference: {fileID: 2100000, guid: 12f0e2bcbb4680144b1a8b0c782e931c, type: 2}
     - target: {fileID: -1557231361705266994, guid: 67ac70456e2f27b4d8dbc5fb163ee817, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 9cf2315bf2d95f44bb85085baeba105f, type: 2}
+      objectReference: {fileID: 2100000, guid: 12f0e2bcbb4680144b1a8b0c782e931c, type: 2}
     - target: {fileID: 919132149155446097, guid: 67ac70456e2f27b4d8dbc5fb163ee817, type: 3}
       propertyPath: m_Name
       value: ChineseCheckersBoard
@@ -6947,11 +6947,11 @@ PrefabInstance:
     - target: {fileID: 4063199033973257954, guid: 67ac70456e2f27b4d8dbc5fb163ee817, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 9a2d0e9444e456d468cef04f1145dd44, type: 2}
+      objectReference: {fileID: 2100000, guid: 12f0e2bcbb4680144b1a8b0c782e931c, type: 2}
     - target: {fileID: 4570314381997254164, guid: 67ac70456e2f27b4d8dbc5fb163ee817, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: cc6934539f625c54982b30c1cb14fc5f, type: 2}
+      objectReference: {fileID: 2100000, guid: 12f0e2bcbb4680144b1a8b0c782e931c, type: 2}
     - target: {fileID: 5417328020067819724, guid: 67ac70456e2f27b4d8dbc5fb163ee817, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
