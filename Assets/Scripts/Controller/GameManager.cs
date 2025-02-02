@@ -4,8 +4,13 @@ using UnityEngine;
 
 namespace Controller
 {
-    public class GameManager : MonoBehaviour
+    public class GameManager : Utilities.SingletonMonoBehaviour<GameManager>
     {
+        protected override void Awake()
+        {
+            base.Awake();
+        }
+
         // Start is called before the first frame update
         void Start()
         {
