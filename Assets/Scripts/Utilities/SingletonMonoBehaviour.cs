@@ -14,7 +14,7 @@ namespace Utilities
                 if (instance == null)
                 {
                     // Find the instance in the scene if it hasn't been assigned
-                    instance = FindObjectOfType<T>();
+                    instance = FindFirstObjectByType<T>();
 
                     // If no instance exists, create one
                     if (instance == null)

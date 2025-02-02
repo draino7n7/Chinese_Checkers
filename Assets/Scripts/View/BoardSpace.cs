@@ -1,7 +1,5 @@
-using Model;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using Utilities;
 
 namespace View
 {
@@ -17,15 +15,16 @@ namespace View
         public int Col { get { return col; } }
 
         private MeshRenderer meshRenderer;
+        private GlobalConstants.SpaceStates spaceState;
 
         public GlobalConstants.SpaceStates SpaceState
         {
             set
             {
-                SpaceState = value;
+                spaceState = value;
                 SetMaterial();
             }
-            get { return SpaceState; } 
+            get { return spaceState; } 
         }
 
         // Start is called before the first frame update
@@ -51,25 +50,25 @@ namespace View
                     break;
                 case GlobalConstants.SpaceStates.Highlighted:
                     meshRenderer.materials[0] = spaceHighlightMaterial;
-                    meshRenderer.materials[0].color = Utilities.SingletonMonoBehaviour<ColorPicker>.Instance.HighlightColor;
+                    meshRenderer.materials[0].color = ColorPicker.Instance.HighlightColor;
                     break;
                 case GlobalConstants.SpaceStates.Player1Piece:
-                    meshRenderer.materials[0].color = Utilities.SingletonMonoBehaviour<ColorPicker>.Instance.Player1Color;
+                    meshRenderer.materials[0].color = ColorPicker.Instance.Player1Color;
                     break;
                 case GlobalConstants.SpaceStates.Player2Piece:
-                    meshRenderer.materials[0].color = Utilities.SingletonMonoBehaviour<ColorPicker>.Instance.Player2Color;
+                    meshRenderer.materials[0].color = ColorPicker.Instance.Player2Color;
                     break;
                 case GlobalConstants.SpaceStates.Player3Piece:
-                    meshRenderer.materials[0].color = Utilities.SingletonMonoBehaviour<ColorPicker>.Instance.Player3Color;
+                    meshRenderer.materials[0].color = ColorPicker.Instance.Player3Color;
                     break;
                 case GlobalConstants.SpaceStates.Player4Piece:
-                    meshRenderer.materials[0].color = Utilities.SingletonMonoBehaviour<ColorPicker>.Instance.Player4Color;
+                    meshRenderer.materials[0].color = ColorPicker.Instance.Player4Color;
                     break;
                 case GlobalConstants.SpaceStates.Player5Piece:
-                    meshRenderer.materials[0].color = Utilities.SingletonMonoBehaviour<ColorPicker>.Instance.Player5Color;
+                    meshRenderer.materials[0].color = ColorPicker.Instance.Player5Color;
                     break;
                 case GlobalConstants.SpaceStates.Player6Piece:
-                    meshRenderer.materials[0].color = Utilities.SingletonMonoBehaviour<ColorPicker>.Instance.Player6Color;
+                    meshRenderer.materials[0].color = ColorPicker.Instance.Player6Color;
                     break;
 
             }

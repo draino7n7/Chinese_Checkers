@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1659611685243162623}
   - component: {fileID: 5783782453252931472}
   m_Layer: 0
-  m_Name: Space
+  m_Name: BoardSpace
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

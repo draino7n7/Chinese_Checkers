@@ -1,7 +1,6 @@
 using UnityEngine;
-using Utilities;
 
-namespace View
+namespace Utilities
 {
     public class ColorPicker : SingletonMonoBehaviour<ColorPicker>
     {

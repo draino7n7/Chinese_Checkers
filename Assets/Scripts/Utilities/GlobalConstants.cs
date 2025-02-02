@@ -1,7 +1,4 @@
-using System;
-using UnityEditor.PackageManager;
-
-namespace Model
+namespace Utilities
 {
     public static class GlobalConstants
     {
