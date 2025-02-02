@@ -2,6 +2,6 @@ namespace Model
 {
     public struct BoardGameState
     {
-        public GlobalConstants.Players PlayerTurn;
+        public Utilities.GlobalConstants.Players PlayerTurn;
     }
 }

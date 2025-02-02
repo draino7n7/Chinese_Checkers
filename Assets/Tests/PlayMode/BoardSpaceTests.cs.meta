@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: 5416cf682a9e6c744814bd4b1856f171
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - colorPickerPrefab: {fileID: 1857324675203604357, guid: 8937e10db793de349a2ef8c836c40250, type: 3}
+  - boardSpacePrefab: {fileID: 8949574867305486584, guid: 7a74de05e2bc5484384d064e0c73a582, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
