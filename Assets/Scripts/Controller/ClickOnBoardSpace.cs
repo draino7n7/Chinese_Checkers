@@ -1,42 +1,49 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 namespace Controller
 {
     public class ClickOnBoardSpace : MonoBehaviour
     {
-        // Start is called before the first frame update
-        void Start()
-        {
+        private Camera mainCamera;
+        private PlayerInputActions inputActions;
 
+        private void Awake()
+        {
+            mainCamera = Camera.main;
+            inputActions = new PlayerInputActions();
         }
 
-        void Update()
+        private void OnEnable()
         {
-            // Detect left mouse button click
-            if (Input.GetMouseButtonDown(0))
-            {
-                // Raycast from the mouse position
-                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-                RaycastHit hit;
+            inputActions.Gameplay.Click.performed += OnPointerClick;
+            inputActions.Gameplay.Enable();
+        }
 
-                if (Physics.Raycast(ray, out hit))
+        private void OnDisable()
+        {
+            inputActions.Gameplay.Click.performed -= OnPointerClick;
+            inputActions.Gameplay.Disable();
+        }
+
+        private void OnPointerClick(InputAction.CallbackContext context)
+        {
+            Ray ray = mainCamera.ScreenPointToRay(Mouse.current.position.ReadValue());
+            RaycastHit hit;
+
+            if (Physics.Raycast(ray, out hit))
+            {
+                View.BoardSpace spaceView = hit.collider.gameObject.GetComponent<View.BoardSpace>();
+                if (spaceView != null)
                 {
-                    // Check if the object hit has the SpaceView script
-                    View.BoardSpace spaceView = hit.collider.gameObject.GetComponent<View.BoardSpace>();
-                    if (spaceView != null)
-                    {
-                        Debug.Log("SpaceView object clicked: " + hit.collider.gameObject.name);
-                        HandleClick(spaceView);
-                    }
+                    Debug.Log("SpaceView object clicked: " + hit.collider.gameObject.name);
+                    HandleClick(spaceView);
                 }
             }
         }
 
         private void HandleClick(View.BoardSpace spaceView)
         {
-            // Add logic to handle what happens when the object is clicked
             Debug.Log($"Handling click on: {spaceView.gameObject.name} at row {spaceView.Row} and column {spaceView.Col}");
         }
     }
