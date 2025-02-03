@@ -1,0 +1,6 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Scripts/View/UI/MainMenu.uss?fileID=7433441132597879392&amp;guid=00683ee8d7bacdb4781db4cf7f144c67&amp;type=3#MainMenu" />
+    <engine:VisualElement name="root" class="center-container">
+        <engine:Button text="New Game" name="newGameButton" selectable="true" class="centered-button"/>
+    </engine:VisualElement>
+</engine:UXML>

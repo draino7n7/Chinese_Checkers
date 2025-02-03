@@ -2,6 +2,21 @@ namespace Utilities
 {
     public static class GlobalConstants
     {
+        public enum WindowStates
+        {
+            MainMenu,
+            Game
+        }
+
+        public enum GameStates
+        {
+            PreGame,
+            NewGame,
+            PlayerTurn,
+            AI_Thinking,
+            EndGame
+        }
+
         public enum Players
         {
             Player1,
