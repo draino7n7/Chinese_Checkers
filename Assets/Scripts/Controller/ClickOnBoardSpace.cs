@@ -1,3 +1,4 @@
+using Model;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -30,16 +31,19 @@ namespace Controller
 
         private void OnPointerClick(InputAction.CallbackContext context)
         {
-            Ray ray = mainCamera.ScreenPointToRay(Mouse.current.position.ReadValue());
-            RaycastHit hit;
-
-            if (Physics.Raycast(ray, out hit))
+            if (GlobalVariables.Instance.WindowState == Utilities.GlobalConstants.WindowStates.Game && GlobalVariables.Instance.GameState == Utilities.GlobalConstants.GameStates.PlayerTurn)
             {
-                View.BoardSpace spaceView = hit.collider.gameObject.GetComponent<View.BoardSpace>();
-                if (spaceView != null)
+                Ray ray = mainCamera.ScreenPointToRay(Mouse.current.position.ReadValue());
+                RaycastHit hit;
+
+                if (Physics.Raycast(ray, out hit))
                 {
-                    Debug.Log("SpaceView object clicked: " + hit.collider.gameObject.name);
-                    HandleClick(spaceView);
+                    View.BoardSpace spaceView = hit.collider.gameObject.GetComponent<View.BoardSpace>();
+                    if (spaceView != null)
+                    {
+                        Debug.Log("SpaceView object clicked: " + hit.collider.gameObject.name);
+                        HandleClick(spaceView);
+                    }
                 }
             }
         }
