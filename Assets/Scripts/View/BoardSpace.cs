@@ -5,14 +5,12 @@ namespace View
 {
     public class BoardSpace : MonoBehaviour
     {
-        [SerializeField]    private int row;
-        [SerializeField]    private int col;
-
         [SerializeField] private Material spaceHighlightMaterial;
         [SerializeField] private Material playerPieceMaterial;
 
-        public int Row { get { return row; } }
-        public int Col { get { return col; } }
+        public int Q {  get; private set; }
+        public int R { get; private set; }
+        public int S { get; private set; }
 
         private MeshRenderer meshRenderer;
         private GlobalConstants.SpaceStates spaceState;
@@ -37,6 +35,25 @@ namespace View
         void Update()
         {
 
+        }
+
+        public void Initialize(int q, int r, int s)
+        {
+            Q = q;
+            R = r;
+            S = s;
+            Vector3 newPosition = new Vector3(CalculateX(), 0f, CalculateZ());
+            transform.position = newPosition;
+        }
+
+        private float CalculateX()
+        {
+            return (R - S) * 0.5f;
+        }
+
+        private float CalculateZ() 
+        { 
+            return (1.5f * Q) / Mathf.Sqrt(3);
         }
 
         private void SetMaterial()

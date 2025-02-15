@@ -50,7 +50,7 @@ namespace Controller
 
         private void HandleClick(View.BoardSpace spaceView)
         {
-            Debug.Log($"Handling click on: {spaceView.gameObject.name} at row {spaceView.Row} and column {spaceView.Col}");
+            Debug.Log($"Handling click on: {spaceView.gameObject.name} at {spaceView.Q}, {spaceView.R}, {spaceView.S}.");
         }
     }
 }
