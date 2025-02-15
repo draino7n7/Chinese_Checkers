@@ -14,6 +14,8 @@ namespace View
 
         private MeshRenderer meshRenderer;
         private GlobalConstants.SpaceStates spaceState;
+        private bool spaceHighlighted;
+        private GameObject outline;
 
         public GlobalConstants.SpaceStates SpaceState
         {
@@ -25,10 +27,24 @@ namespace View
             get { return spaceState; } 
         }
 
+        public bool SpaceHighlighted
+        {
+            set
+            {
+                spaceHighlighted = value;
+                outline.SetActive(spaceHighlighted);
+            }
+            get { return spaceHighlighted; }
+        }
+
         // Start is called before the first frame update
         void Start()
         {
             meshRenderer = GetComponent<MeshRenderer>();
+            outline = transform.Find("Outline")?.gameObject;
+
+            if (outline != null) 
+                outline.SetActive(false);
         }
 
         // Update is called once per frame
